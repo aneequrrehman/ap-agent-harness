@@ -4,6 +4,8 @@ A self-evolving accounts payable agent. The agent matches invoices against purch
 
 Built for the Harness Engineering & Model Wrangling Hackathon, Statement One (recursive harnessing), with MongoDB Atlas as the data and memory layer and Mastra as the agent runtime.
 
+> **Authorship.** The design was worked out in conversation between Aneeq ur Rehman and Claude (Claude Fable 5.1, via Claude Code). The code, the synthetic dataset and this README were written by Claude during the hackathon on 11 October 2026. The harness versions v1 onward were written by the harness itself, using gpt-6-luna as the reflector.
+
 ## What evolves
 
 Everything the worker agent is given lives in Atlas as a versioned `harness_versions` document:
