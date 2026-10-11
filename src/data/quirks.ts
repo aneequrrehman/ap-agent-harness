@@ -1,0 +1,20 @@
+/** Human-readable names for the planted quirks, keyed by the quirkId in invoice labels. */
+export const QUIRK_NAMES: Record<string, { vendor: string; title: string; hint: string }> = {
+  acme_partial: { vendor: "Acme Logistics", title: "Invoices per shipment", hint: "Partial quantities against the PO are normal when they match the receipt." },
+  ups_no_po: { vendor: "UPS", title: "Account billing, never a PO", hint: "Belongs to logistics, not the AP clerk." },
+  fedex_fuel: { vendor: "FedEx Freight", title: "Fuel surcharge line", hint: "Never on the PO, always legitimate." },
+  globex_2pct: { vendor: "Globex", title: "2% contract indexation", hint: "Prices up to 2% over PO are allowed by contract." },
+  initech_eur: { vendor: "Initech", title: "Bills in EUR against USD POs", hint: "Approve when the converted total is within 1%." },
+  umbrella_reissue: { vendor: "Umbrella Supplies", title: "Reissue after credit note", hint: "Same base number with a -R suffix is not a duplicate." },
+  stark_case12: { vendor: "Stark Industries", title: "Priced per case of 12", hint: "Quantity and unit price differ from the PO but totals match." },
+  wayne_freight: { vendor: "Wayne Enterprises", title: "Freight line up to $50", hint: "Small freight charges are within the allowance." },
+  wayne_freight_over: { vendor: "Wayne Enterprises", title: "Freight line over $50", hint: "Above the allowance goes to procurement." },
+  tyrell_hold: { vendor: "Tyrell Corp", title: "Invoices before delivery", hint: "Hold for receipt instead of bothering procurement." },
+  vandelay_tons: { vendor: "Vandelay Imports", title: "Bills in tons, PO in kg", hint: "Unit conversion, totals match." },
+  dunder_rush_ok: { vendor: "Dunder Mifflin", title: "Rush fee on a rush PO", hint: "Legitimate only when the PO is flagged rush." },
+  dunder_rush_bad: { vendor: "Dunder Mifflin", title: "Rush fee on a normal PO", hint: "Not authorized, route to procurement." },
+  soylent_memo_po: { vendor: "Soylent Industrial", title: "PO number hidden in the memo", hint: "PO field empty, 'Ref: PO-xxxx' in the memo." },
+  oscorp_bank_change: { vendor: "Oscorp", title: "Bank details changed recently", hint: "Fraud review even on a perfect match." },
+  pied_leading_zeros: { vendor: "Pied Piper", title: "Duplicate with leading zeros", hint: "INV-0001234 is the same as INV-1234." },
+  massive_tax: { vendor: "Massive Dynamic", title: "Sales tax line at 8.25%", hint: "Not on the PO, always legitimate." },
+};

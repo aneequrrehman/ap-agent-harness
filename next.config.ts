@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  serverExternalPackages: ["mongodb", "@mastra/core", "@mastra/mongodb"],
   turbopack: {
     rules: {
       "*.css": {
